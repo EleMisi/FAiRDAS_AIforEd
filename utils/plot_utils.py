@@ -7,6 +7,9 @@ import pandas as pd
 import seaborn as sns
 
 import const_define as cd
+import matplotlib
+matplotlib.rcParams['pdf.fonttype'] = 42
+matplotlib.rcParams['ps.fonttype'] = 42
 
 plt.rcParams['font.size'] = 10
 sns.set_style('whitegrid')
@@ -191,7 +194,7 @@ def plot_actions_heatmap(action_record, seed_to_plot: int, imgpath_eps: str, img
         plt.savefig(os.path.join(imgpath_eps, fname + '.eps'), format='eps',
                     bbox_inches="tight", dpi=300)
         plt.savefig(os.path.join(imgpath_png, fname + '.png'), format='png',
-                    bbox_inches="tight")
+                    bbox_inches="tight", dpi=300)
         plt.close('all')
 
     # Plot action vectors separately
@@ -211,7 +214,7 @@ def plot_actions_heatmap(action_record, seed_to_plot: int, imgpath_eps: str, img
         plt.savefig(os.path.join(imgpath_eps, fname + '.eps'), format='eps',
                     bbox_inches="tight", dpi=300)
         plt.savefig(os.path.join(imgpath_png, fname + '.png'), format='png',
-                    bbox_inches="tight")
+                    bbox_inches="tight", dpi=300)
         plt.close('all')
 
         # FAiRDAS
@@ -230,7 +233,7 @@ def plot_actions_heatmap(action_record, seed_to_plot: int, imgpath_eps: str, img
         plt.savefig(os.path.join(imgpath_eps, fname + '.eps'), format='eps',
                     bbox_inches="tight", dpi=300)
         plt.savefig(os.path.join(imgpath_png, fname + '.png'), format='png',
-                    bbox_inches="tight")
+                    bbox_inches="tight", dpi=300)
         plt.close('all')
 
 
